@@ -3,6 +3,8 @@
 <% @messages.each do |message| %>
   <p>
     <%= message.title %>
-    <%= link_to "詳細", message_path(message) %>    
+    <%= link_to "詳細", message_path(message) %>
+    <%= link_to "編集", edit_message_path(message) %>
+    
   </p>
 <% end %>
