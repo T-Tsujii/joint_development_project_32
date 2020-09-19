@@ -1,7 +1,12 @@
 class TasksController < ApplicationController
+  # タスクの一覧表示アクション
+  def index
+    @tasks = Task.all
+  end
+
   # タスクの新規登録アクション
   def new
-    @task = Task.new(task_params)
+    @task = Task.new
   end
 
   # タスクの登録完了アクション
