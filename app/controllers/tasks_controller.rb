@@ -14,6 +14,11 @@ class TasksController < ApplicationController
     Task.create(task_params)
   end
 
+  # タスクの詳細表示アクション
+  def show
+    @task = Task.find(params[:id])
+  end
+
   # StrongParameterの記述部分
   private
 
