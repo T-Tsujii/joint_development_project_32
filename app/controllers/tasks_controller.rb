@@ -24,10 +24,16 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
-  # StrongParameterの記述部分
+  # タスクの更新アクション
   def update
     task = Task.find(params[:id])
     task.update(task_params)
+  end
+
+  # StrongParameterの記述部分
+  def destroy
+    task = Task.find(params[:id])
+    task.destroy
   end
 
   # StrongParameterの記述部分
